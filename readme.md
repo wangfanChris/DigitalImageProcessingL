@@ -1,0 +1,1 @@
+This is a dictionary which contains notes and code examples for 'Digital Image Processing' (written by Rafael C.Conzalez).
