@@ -101,7 +101,7 @@
 #### 单像素
 以灰度为基础，对单个像素做映射变换
 ### 邻域
-![](DIPL.md.Pic\2.6-21.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/2.6-21.png?raw=true)
 
 其中Sxy是大小为mxn，中心在(x,y)的矩形领域中像素的平均值 //可以用来打马赛克么。。。
 #### 几何空间变换的图像配准
@@ -114,11 +114,11 @@ i）坐标的空间变换
 (x,y) = T{(v,w)}    例如 (x,y) = T{(v,w)} = (v/2, w/2) 在两个方向上把原图缩小一半
 
 仿射变换：
-![](DIPL.md.Pic\2.6-23.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/2.6-23.png?raw=true)
 
 根据矩阵T中的值，对一组坐标点做尺度/旋转/平移或偏移
  
-![](DIPL.md.Pic\Table2.2.jpg)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/Table2.2.jpg?raw=true)
 
 实际上，我们可以按照两种基本方法来使用仿射变换公式。
 向前映射: 扫描输入图像的像素，并在每个位置(v,w)直接计算输出图像中相应像素的空间位置(x,y)构成
@@ -144,7 +144,7 @@ i）坐标的空间变换
 
 像素向量z 和一个任意点a 在n维空间的欧式距离D可以用一个向量积来定义：
 
-![](DIPL.md.Pic\2.6-27.jpg)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/2.6-27.jpg?raw=true)
 
 向量范数，表示为 ||z - a||
 
@@ -156,7 +156,7 @@ i）坐标的空间变换
 
 二维线性变换 
 
-![](DIPL.md.Pic\2.6-30.jpg)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/2.6-30.jpg?raw=true)
 
 其中f(x,y) 是输入图像 r(x,y,u,v)正变换核，
 
@@ -210,7 +210,7 @@ xxx只是一些介绍性文字和举例
 #### 3.3.1 直方图均衡
 目标灰度 ps(s) = 1 / (L - 1)
 
-![](DIPL.md.Pic\3.3-8.png) MN是图像中像素个数 nk是图像中灰度为rk的像素个数
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.3-8.png?raw=true) MN是图像中像素个数 nk是图像中灰度为rk的像素个数
 
 推导过程就先布列出来了，有兴趣翻书看。比较简单
 
@@ -229,11 +229,11 @@ xxx只是一些介绍性文字和举例
 
 首先[0,L-1]寻找直方图均衡变换:
 
-![](DIPL.md.Pic\Ex3.7L1.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/Ex3.7L1.png?raw=true)
 
 输入灰度值的平方 除以 (L-1)^2 将产生一幅灰度为s并具有均匀PDF的图像，因为这是早些时候讨论的直方图均衡变换。但我们感兴趣的是具有规定直方图的图像，因此，在[0,L-1]区间寻找下一个直方图均衡变换:
 
-![](DIPL.md.Pic\Ex3.7L2.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/Ex3.7L2.png?raw=true)
 
 最后求G(z) = s,但 G(z) = z^3 / (L -1)^2连立等式得
 
@@ -266,10 +266,10 @@ z= [(L-1)^2 * s]^1/3 又s = r^2 /(L - 1)
 
 旋转，指的是多维方向旋转。
 
-![](DIPL.md.Pic\3.30.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.30.png?raw=true)
 
 卷积的数学表示:
-![](DIPL.md.Pic\3.4-2.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.4-2.png?raw=true)
 
 -s -t表示翻转180，如果是相关即+s +t五角星为空心五角星
 
@@ -281,7 +281,7 @@ R = wTz (wT滤波器的倒置 z 由滤波器覆盖的相应图像灰度值)
 
 #### 3.4.5 空间滤波器模板的产生
 高斯模糊是一种图像模糊滤波器，它用正太分布计算图像中每个像素的变。N维空间正太分布方程为
-![](DIPL.md.Pic\3.4.5-1.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.4.5-1.png?raw=true)
 
 这样进行模糊处理比其他的均衡模糊滤波器更高的保留了边缘效果。
 
@@ -290,7 +290,7 @@ R = wTz (wT滤波器的倒置 z 由滤波器覆盖的相应图像灰度值)
 除了圆形对称之外，高斯模糊也可以在二维图像上对两个独立的一维空间分别进行计算，这叫作线性可分。这也就是说，使用二维矩阵变换得到的效果也可以通过在水平方向进行一维高斯矩阵变换加上竖直方向的一维高斯矩阵变换得到。从计算的角度来看，这是一项有用的特性，因为这样只需要
 
 对一幅图像进行多次连续高斯模糊的效果与一次更大的高斯模糊可以产生同样的效果，大的高斯模糊的半径是所用多个高斯模糊半径平方和的平方根。例如，使用半径分别为 6 和 8 的两次高斯模糊变换得到的效果等同于一次半径为 10 的高斯模糊效果， 。根据这个关系，使用多个连续较小的高斯模糊处理不会比单个高斯较大处理时间要少。
-![](DIPL.md.Pic\3.4.5-2.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.4.5-2.png?raw=true)
 
 ### 3.5 平滑空间滤波器
 #### 3.5.1 平滑空间滤波
@@ -298,10 +298,10 @@ R = wTz (wT滤波器的倒置 z 由滤波器覆盖的相应图像灰度值)
 也称为均值滤波器。常用目的就是降低噪声。
 
 加权的均值滤波器
-![](DIPL.md.Pic\3.5-1.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.5-1.png?raw=true)
 
 平滑滤波器模板，其中数字是权值
-![](DIPL.md.Pic\3.32.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.32.png?raw=true)
 
 #### 3.5.2 统计排序滤波器（非线性）
 这种滤波器的响应以滤波器包围的图像区域中，所包含的像素排序为基础，使用统计排序结果决定替代中心像素的值。比如中值滤波器，将像素领域内灰度的中值代替该像素的值。它提供了一种优秀的去噪能力，而且比相同尺寸的线性平滑滤波器的模糊层度明显要低。它对付椒盐噪声非常有效。
@@ -312,16 +312,16 @@ R = wTz (wT滤波器的倒置 z 由滤波器覆盖的相应图像灰度值)
 #### 3.6.1 基础
 对于一维函数，其一阶微分的基本定义是差值
 
-![](DIPL.md.Pic\3.6-1.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.6-1.png?raw=true)
 
 对于二阶微分，定义为如下差分
 
-![](DIPL.md.Pic\3.6-2.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.6-2.png?raw=true)
 
 下图显示了一段扫描线，小方块中是扫描线中的灰度值
 
 
-![](DIPL.md.Pic\3.36.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.36.png?raw=true)
 
 图中的零交叉对于边缘定位是十分重要的。
 
@@ -331,9 +331,9 @@ R = wTz (wT滤波器的倒置 z 由滤波器覆盖的相应图像灰度值)
 
 一个二维图像函数f(x,y)的拉普拉斯算子定义为：
 
-![](DIPL.md.Pic\3.6-3.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.6-3.png?raw=true)
 
-![](DIPL.md.Pic\3.6-6.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.6-6.png?raw=true)
 
 实际使用的基本表达式即
 g(x,y) = f(x,y) + c[▼²f(x,y)]
@@ -354,15 +354,15 @@ g(x,y) = f(x,y) + k * g_mask(x,y)
 当k > 1时，我们将该处理称为高提升滤波
 k< 1 时，我们将该处理称为 非锐化掩膜
 
-![](DIPL.md.Pic\3.39.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.39.png?raw=true)
 
 #### 3.6.4 使用一阶微分对（非线性）图像锐化------梯度
  
-![](DIPL.md.Pic\3.6-18.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.6-18.png?raw=true)
 
 卷积模板
 
-![](DIPL.md.Pic\3.14.png)
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.14.png?raw=true)
 
 图中 d和e 的模板称为 soble算子，中心系数使用权重2的思想是通过突出中心点的作用而达到平滑的目的
 
@@ -409,9 +409,9 @@ Z中的模糊集合 A由 隶属度函数 ua(z) 表征， 它是与Z的元素相�
 
 以下给出了常用隶属度函数的形式和图形
 
-![](DIPL.md.Pic\常用隶属度函数.png) 
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/常用隶属度函数.png?raw=true) 
 
-![](DIPL.md.Pic\常用隶属度函数图形.png) 
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/常用隶属度函数图形.png?raw=true) 
 
 
 #### 3.8.3 模糊集合的应用
@@ -427,10 +427,10 @@ IF 像素 灰 THEN 输出 灰
 IF 像素 亮 THEN 输出 亮
 
 则具有如下公式表述
-![](DIPL.md.Pic\3.8-22.png) 
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.8-22.png?raw=true) 
 
 基于如上规则的对比度增强相关度图形
-![](DIPL.md.Pic\3.53.png) 
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.53.png?raw=true) 
 
 
 #### 3.8.5 使用模糊集合进行空间滤波
@@ -451,7 +451,7 @@ ELSE z5 = 1
 
 其中隶属函数图如下:
 
-![](DIPL.md.Pic\3.57.png) 
+![](https://github.com/wangfanChris/DigitalImageProcessingL/blob/master/doc/DIPL.md.Pic/3.57.png?raw=true) 
 
 # 第四章 频率与域滤波
 
